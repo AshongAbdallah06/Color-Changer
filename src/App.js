@@ -1,49 +1,22 @@
 import Header from './Header';
 import Content from './Content';
-import Footer from './Footer';
 import { useState } from 'react';
-
+import Footer from './Footer';
 
 function App() {
-    const [items, setitems] = useState([
-        {
-            id: 1,
-            checked: false,
-            item: "One half pound bag of Cocoa Covered Almonds Unsalted"
-        }, {
-            id: 2,
-            checked: false,
-            item: "Item 2"
-        }, {
-            id: 3,
-            checked: false,
-            item: "Item 3"
-        }, 
-    ]);
-
-    const handleCheck = (id) => {
-        const listItems = items.map((item) => item.id === id ? {...item, checked: !item.checked } : item );
-        setitems(listItems);
-        localStorage.setItem('shoppinglist', JSON.stringify(listItems));
-    }
-
-
-    const handleDelete = (id) => {
-        const listItems = items.filter((item) => item.id !== id);
-        setitems(listItems);
-        localStorage.setItem('shoppinglist', JSON.stringify(listItems));
-    }
+    const [color, setColor] = useState('Empty Value');
+    // const [input, setInput] = useState('');
 
     return (
         <div className="App">
-            <Header title="Groceries" />
+            <Header title="Color Changer" />
             <Content 
-                items={items}
-                handleCheck={handleCheck}
-                handleDelete={handleDelete}
+                color={color}
+                setColor={setColor}
+                // input={input}
+                // setInput={setInput}
             />
             <Footer 
-                length={items.length}
             />
         </div>
     );

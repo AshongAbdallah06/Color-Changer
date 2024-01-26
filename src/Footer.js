@@ -1,10 +1,11 @@
 import React from 'react'
 
-const Footer = ({length}) => {
+const Footer = () => {
+    const date = new Date();
     return (
         <footer>
-            <p>
-                {length} List {length === 1 ? "item" : "items"}
+            <p className='attribution'>
+                By Ashong Abdallah &copy; {date.getFullYear()}
             </p>
         </footer>
     )

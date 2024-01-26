@@ -1,20 +1,22 @@
 import React from 'react';
-import ItemList from './ItemList';
 
-const Content = ({items, handleCheck, handleDelete}) => {
-  return (
-    <main>
-        {items.length ? (
-            <ItemList 
-                items={items}
-                handleCheck={handleCheck}
-                handleDelete={handleDelete}
+const Content = ({ color, setColor }) => {
+    
+    return (
+        <main>
+            <div className="ColorContainer" style={{ backgroundColor: `${color === 'Empty Value' ? '' : color}` }}>
+                <p className="text">
+                    {color}
+                </p>
+            </div>
+            <input 
+                id='1'
+                type='text'
+                placeholder='Add color name'
+                onChange={(e) => setColor(e.target.value === '' ? 'Empty Value' : e.target.value)}
             />
-        ) : (
-            <p style={{marginTop: '2rem'}}>Your list is empty</p>
-        )}
-    </main>
-  );
+        </main>
+    );
 }
 
 export default Content;
