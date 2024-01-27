@@ -5,7 +5,7 @@ const Footer = () => {
     return (
         <footer>
             <p className='attribution'>
-                By Ashong Abdallah &copy; {date.getFullYear()}
+                By <a href="https://github.com/AshongAbdallah06">Ashong Abdallah</a> &copy; {date.getFullYear()}
             </p>
         </footer>
     )
