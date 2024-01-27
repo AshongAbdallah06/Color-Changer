@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/Color-Changer/static/css/main.229fcaa8.css",
-    "main.js": "/Color-Changer/static/js/main.b2bb5473.js",
+    "main.js": "/Color-Changer/static/js/main.28e8ad45.js",
     "index.html": "/Color-Changer/index.html",
     "main.229fcaa8.css.map": "/Color-Changer/static/css/main.229fcaa8.css.map",
-    "main.b2bb5473.js.map": "/Color-Changer/static/js/main.b2bb5473.js.map"
+    "main.28e8ad45.js.map": "/Color-Changer/static/js/main.28e8ad45.js.map"
   },
   "entrypoints": [
     "static/css/main.229fcaa8.css",
-    "static/js/main.b2bb5473.js"
+    "static/js/main.28e8ad45.js"
   ]
 }
