@@ -4,18 +4,23 @@ import { useState } from 'react';
 import Footer from './Footer';
 
 function App() {
-    const [color, setColor] = useState('Empty Value');
-    // const [input, setInput] = useState('');
+    const [colorValue, setColorValue] = useState('Empty Value');
+    const [hexValue, setHexValue] = useState('');
+    const [isDarkText, setIsDarkText] = useState(true);
 
     return (
         <div className="App">
             <Header title="Color Changer" />
+
             <Content 
-                color={color}
-                setColor={setColor}
-                // input={input}
-                // setInput={setInput}
+                colorValue={colorValue}
+                setColorValue={setColorValue}
+                hexValue={hexValue}
+                setHexValue={setHexValue}
+                isDarkText={isDarkText}
+                setIsDarkText={setIsDarkText}
             />
+
             <Footer 
             />
         </div>

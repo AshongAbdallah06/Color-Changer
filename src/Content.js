@@ -1,20 +1,24 @@
 import React from 'react';
+import Square from './Square';
+import Input from './Input';
+import { useRef } from 'react';
 
-const Content = ({ color, setColor }) => {
+const Content = ({ colorValue, setColorValue, hexValue, setHexValue }) => {
+    const inputRef = useRef();
     
     return (
         <main>
-            <div className="ColorContainer" style={{ backgroundColor: `${color === 'Empty Value' ? '' : color}` }}>
-                <p className="text">
-                    {color}
-                </p>
-            </div>
-            <input 
-                id='1'
-                type='text'
-                placeholder='Add color name'
-                onChange={(e) => setColor(e.target.value === '' ? 'Empty Value' : e.target.value)}
+            <Square 
+                colorValue={colorValue}
+                hexValue={hexValue}
             />
+
+            <Input 
+                inputRef={inputRef}
+                setColorValue={setColorValue}
+                setHexValue={setHexValue}
+            />
+
         </main>
     );
 }
